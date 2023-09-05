@@ -1,0 +1,96 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	background: #0a4751;
+	background: linear-gradient(139deg,#9ecbd2cb 0%,#bf2a0cb6 90%);
+}
+.container{
+	position: relative;
+	max-width: 600px;
+	padding: 10px;
+	margin: 45px auto;
+}
+.addComment{
+	width: 100%;
+	display: flex;
+	padding: 5px 0;
+}
+.addComment > input[type="text"]{
+	width: 80%;
+	color: #9c5a5a;
+	/* Ahmed */
+	border:none;
+	border-bottom: 2px solid #fc0404;
+	background: none;
+	padding: 10px;
+	font-size: 20px;
+	outline: none;
+}
+.addComment button{
+	margin: 0 5px;
+	background: #222;
+	/* Ahmed */
+	color: #af7d38;
+	font-size: 10px;
+	text-transform: uppercase;
+	padding: 5px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.notCompleted, .Completed{
+	margin: 5px 0;
+	padding: 10px;
+}
+h3{
+	font-size: 25px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #94944c;
+}
+ol{
+	list-style: none;
+	counter-reset: my-counter;
+}
+ol li{
+	width: 100%;
+	/* Ahmed */
+	padding: 18px;
+	margin: 5px 0;
+	background: #7c6a6abb;
+	font-size: 22px;
+	counter-increment: my-counter;
+}
+ol.Completed li{
+	background: #459d67;
+}
+ol li::before{
+	content: counter(my-counter);
+	/* Ahmed */
+	background: #9d8dfb;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 2rem;
+	text-align: center;
+	color: #fff;
+	margin-right: 0.5rem;
+}
+li button{
+	float: right;
+	/* Ahmed */
+	padding: 5px;
+	font-size: 25px;
+	line-height: 25px;
+	margin-right: 12px;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
